@@ -1,0 +1,26 @@
+[
+    {
+        "name":"Aix enProvence",
+        "position": {
+            "lat":43.475611,
+            "long":5.378759
+        },
+        "telephone":"+334.00.00.00.00",
+        "adresse":"430 rue Pierre Simon Laplace",
+        "adresseComp":"",
+        "codePostal":"13592",
+        "ville":"Aix-en-Provence"
+    },
+    {
+        "name":"Rennes",
+        "position": {
+            "lat":48.093130,
+            "long":-1.704204
+        },
+        "telephone":"+332.00.00.00.00",
+        "adresse":"Immeuble Cap Courrouze, bât. 3",
+        "adresseComp":"ZAC de la Courrouze, Secteur Dominos 1C rue Louis Braille",
+        "codePostal":"35136",
+        "ville":"Saint-Jacques de la Lande"
+    }
+]

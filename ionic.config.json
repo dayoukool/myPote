@@ -1,0 +1,7 @@
+{
+  "name": "guideIt",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

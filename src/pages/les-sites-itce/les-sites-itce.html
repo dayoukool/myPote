@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Les sites IT-CE
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page5">
+  <ion-list id="lesSitesITCE-list1">
+    <ion-item *ngFor="let site of sites; index as i; trackBy: name" color="none" on-click="goToSiteDeXxxx($event, site)" id="lesSitesITCE-list-item11">
+      <ion-icon name="navigate" item-left></ion-icon>
+      {{site.name}}
+    </ion-item>
+  </ion-list>
+</ion-content>
