@@ -16,8 +16,20 @@
         <img src="assets/imgs/aix.jpg"/>
         <ion-card-content>
           <ion-card-title>
-              <strong>Téléphone</strong>
-              <h4>{{site.telephone}}</h4>            
+              <ion-grid>
+                  <ion-row>
+                    <ion-col>
+                      <strong>Téléphone</strong>
+                      <h4>{{site.telephone}}</h4>
+                    </ion-col>
+                    <ion-col>
+                        <button ion-button color="dark" (click)="openTwitter('bortotbenj@hotmail.com')">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </button>
+                    </ion-col>
+                  </ion-row>
+              </ion-grid>  
+                         
           </ion-card-title>
           <ion-card-title>
               <strong>Adresse</strong>

@@ -9,12 +9,15 @@ import { TabsControllerPage } from '../pages/tabs-controller/tabs-controller';
 import { LesSitesITCEPage } from '../pages/les-sites-itce/les-sites-itce';
 import { BonnesAdressesPage } from '../pages/bonnes-adresses/bonnes-adresses';
 import { SiteDeXxxxPage } from '../pages/site-de-xxxx/site-de-xxxx';
+import { SignalerUnDysfonctionnementPage } from '../pages/signaler-un-dysfonctionnement/signaler-un-dysfonctionnement';
 import { SitesItceService } from '../services/sites-itce.service'
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http'; 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
+
 
 @NgModule({
   declarations: [
@@ -25,7 +28,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsControllerPage,
     LesSitesITCEPage,
     BonnesAdressesPage,
-    SiteDeXxxxPage
+    SiteDeXxxxPage,
+    SignalerUnDysfonctionnementPage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsControllerPage,
     LesSitesITCEPage,
     BonnesAdressesPage,
-    SiteDeXxxxPage
+    SiteDeXxxxPage,
+    SignalerUnDysfonctionnementPage
   ],
   providers: [
     SitesItceService,
