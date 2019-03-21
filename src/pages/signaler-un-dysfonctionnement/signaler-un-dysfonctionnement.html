@@ -1,21 +1,23 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>
-      Ionic Image Upload
+      Signaler un dysfontionnement
     </ion-title>
-  </ion-toolbar>
+  </ion-navbar>
 </ion-header>
- 
-<ion-content padding>
-  <h3 *ngIf="images.length == 0" text-center>Please Select Image!</h3>
-  <ion-list>
-    <ion-item *ngFor="let img of images; index as pos" text-wrap>
-      <ion-thumbnail slot="start">
-        <ion-img [src]="img.path"></ion-img>
+<ion-content padding id="">
+  <ion-list id="lesSitesITCE-list1">
+    <ion-item  *ngFor="let img of images; index as pos" color="none" id="dysfonctionnements">
+      <ion-thumbnail item-left>
+        <img [src]="img.path">
       </ion-thumbnail>
-      <ion-label>
-        {{ img.name }}
-      </ion-label>
+      <h2>{{ img.name }}</h2>
+      <button ion-button fill="clear" expand="full" color="light" (click)="deleteImage(img, index+1)">
+        <ion-icon item-right name="trash"></ion-icon>
+      </button>
     </ion-item>
   </ion-list>
 </ion-content>
@@ -23,6 +25,7 @@
   <ion-toolbar color="primary">
     <button ion-button fill="clear" expand="full" color="light" (click)="selectImage()">
       <ion-icon slot="start" name="camera"></ion-icon>
-      Select Image</button>
+          Select Image
+    </button>
   </ion-toolbar>
 </ion-footer>
