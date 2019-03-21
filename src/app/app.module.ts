@@ -2,6 +2,18 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http'; 
+import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { File } from '@ionic-native/File/ngx';
+import { FilePath } from '@ionic-native/file-path/ngx';
+import { WebView } from '@ionic-native/ionic-webview/ngx';
+import { Camera } from '@ionic-native/Camera/ngx';
+// import { File } from '@ionic-native/File';
+import { IonicStorageModule } from '@ionic/storage';
+
 import { VersUnSitePage } from '../pages/vers-un-site/vers-un-site';
 import { SurLeSitePage } from '../pages/sur-le-site/sur-le-site';
 import { DepuisLeSitePage } from '../pages/depuis-le-site/depuis-le-site';
@@ -11,13 +23,6 @@ import { BonnesAdressesPage } from '../pages/bonnes-adresses/bonnes-adresses';
 import { SiteDeXxxxPage } from '../pages/site-de-xxxx/site-de-xxxx';
 import { SignalerUnDysfonctionnementPage } from '../pages/signaler-un-dysfonctionnement/signaler-un-dysfonctionnement';
 import { SitesItceService } from '../services/sites-itce.service'
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { HttpClientModule } from '@angular/common/http'; 
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
-
-
 
 @NgModule({
   declarations: [
@@ -36,7 +41,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     FormsModule,
     HttpModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -51,9 +57,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SignalerUnDysfonctionnementPage
   ],
   providers: [
-    SitesItceService,
-    StatusBar,
-    SplashScreen,
+      SitesItceService,
+      StatusBar,
+      SplashScreen,
+      WebView,
+      Camera,
+      File,
+      FilePath,
+      Storage,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
