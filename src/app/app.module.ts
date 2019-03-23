@@ -11,9 +11,10 @@ import { File } from '@ionic-native/File/ngx';
 import { FilePath } from '@ionic-native/file-path/ngx';
 import { WebView } from '@ionic-native/ionic-webview/ngx';
 import { Camera } from '@ionic-native/Camera/ngx';
+import { NFC, Ndef } from '@ionic-native/nfc/ngx';
 // import { File } from '@ionic-native/File';
 import { IonicStorageModule } from '@ionic/storage';
-
+import { EtreGuidVersPage } from '../pages/etre-guid-vers/etre-guid-vers';
 import { VersUnSitePage } from '../pages/vers-un-site/vers-un-site';
 import { SurLeSitePage } from '../pages/sur-le-site/sur-le-site';
 import { DepuisLeSitePage } from '../pages/depuis-le-site/depuis-le-site';
@@ -22,11 +23,14 @@ import { LesSitesITCEPage } from '../pages/les-sites-itce/les-sites-itce';
 import { BonnesAdressesPage } from '../pages/bonnes-adresses/bonnes-adresses';
 import { SiteDeXxxxPage } from '../pages/site-de-xxxx/site-de-xxxx';
 import { SignalerUnDysfonctionnementPage } from '../pages/signaler-un-dysfonctionnement/signaler-un-dysfonctionnement';
+import { MyPoteInfoPage } from '../pages/my-pote-info/my-pote-info';
 import { SitesItceService } from '../services/sites-itce.service'
 
 @NgModule({
   declarations: [
     MyApp,
+    EtreGuidVersPage,
+    MyPoteInfoPage,
     VersUnSitePage,
     SurLeSitePage,
     DepuisLeSitePage,
@@ -47,6 +51,8 @@ import { SitesItceService } from '../services/sites-itce.service'
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    EtreGuidVersPage,
+    MyPoteInfoPage,
     VersUnSitePage,
     SurLeSitePage,
     DepuisLeSitePage,
@@ -65,6 +71,8 @@ import { SitesItceService } from '../services/sites-itce.service'
       File,
       FilePath,
       Storage,
+      NFC, 
+      Ndef,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
