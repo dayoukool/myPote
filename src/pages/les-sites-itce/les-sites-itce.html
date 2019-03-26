@@ -10,7 +10,7 @@
 </ion-header>
 <ion-content padding id="page5">
   <ion-list id="lesSitesITCE-list1">
-    <ion-item *ngFor="let site of sites; index as i; trackBy: name" color="none" on-click="goToSiteDeXxxx($event, site)" id="lesSitesITCE-list-item11">
+    <ion-item *ngFor="let site of sites; index as i; trackBy: name" color="none" on-click="goToSiteDeXxxx($event, site.id)" id="lesSitesITCE-list-item11">
       <ion-icon name="navigate" item-left></ion-icon>
       {{site.name}}
     </ion-item>

@@ -4,16 +4,16 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
-      Etre guidé vers
+      Etre guidé vers {{searchTypeTranslator(searchType)}}
     </ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content padding id="page9">
   <form id="etreGuidVers-form5">
-    <ion-searchbar placeholder="" name="" id="etreGuidVers-search1"></ion-searchbar>
+    <ion-searchbar placeholder="" name="" id="etreGuidVers-search1" [(ngModel)]="searchIdentifier" [ngModelOptions]="{standalone: true}"></ion-searchbar>
   </form>
   <ion-list id="etreGuidVers-list8">
-    <ion-item color="none" on-click="goToMyPoteInfo()" id="etreGuidVers-list-item34">
+    <ion-item color="none" on-click="goToMyPoteInfo('item1')" id="etreGuidVers-list-item34">
       <ion-avatar item-left>
         <img />
       </ion-avatar>

@@ -12,6 +12,9 @@ import { FilePath } from '@ionic-native/file-path/ngx';
 import { WebView } from '@ionic-native/ionic-webview/ngx';
 import { Camera } from '@ionic-native/Camera/ngx';
 import { NFC, Ndef } from '@ionic-native/nfc/ngx';
+import { IBeacon } from '@ionic-native/ibeacon/ngx';
+import { BluetoothLE } from '@ionic-native/bluetooth-le/ngx';
+
 // import { File } from '@ionic-native/File';
 import { IonicStorageModule } from '@ionic/storage';
 import { EtreGuidVersPage } from '../pages/etre-guid-vers/etre-guid-vers';
@@ -24,11 +27,13 @@ import { BonnesAdressesPage } from '../pages/bonnes-adresses/bonnes-adresses';
 import { SiteDeXxxxPage } from '../pages/site-de-xxxx/site-de-xxxx';
 import { SignalerUnDysfonctionnementPage } from '../pages/signaler-un-dysfonctionnement/signaler-un-dysfonctionnement';
 import { MyPoteInfoPage } from '../pages/my-pote-info/my-pote-info';
-import { SitesItceService } from '../services/sites-itce.service'
+import { BeaconTestPage } from '../pages/beacon-test/beacon-test';
+import { SitesItceService } from '../services/sites-itce.service';
 
 @NgModule({
   declarations: [
     MyApp,
+    BeaconTestPage,
     EtreGuidVersPage,
     MyPoteInfoPage,
     VersUnSitePage,
@@ -51,6 +56,7 @@ import { SitesItceService } from '../services/sites-itce.service'
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    BeaconTestPage,
     EtreGuidVersPage,
     MyPoteInfoPage,
     VersUnSitePage,
@@ -63,6 +69,7 @@ import { SitesItceService } from '../services/sites-itce.service'
     SignalerUnDysfonctionnementPage
   ],
   providers: [
+    BluetoothLE,
       SitesItceService,
       StatusBar,
       SplashScreen,
@@ -73,7 +80,7 @@ import { SitesItceService } from '../services/sites-itce.service'
       Storage,
       NFC, 
       Ndef,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+   {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}

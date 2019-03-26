@@ -3,6 +3,7 @@ import { Platform, NavController, NavParams } from 'ionic-angular';
 import { AppAvailability } from '@ionic-native/app-availability/ngx';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { Device } from '@ionic-native/device/ngx';
+import { SitesItceService } from '../../services/sites-itce.service'
 
 @Component({
   selector: 'page-site-de-xxxx',
@@ -19,11 +20,15 @@ export class SiteDeXxxxPage {
     public appAvailability : AppAvailability,
     public inAppBrowser : InAppBrowser,
     public device : Device,
-
+    public itceServ: SitesItceService
   ) {
-    this.site = navParams.get('site');
+    this.site =  navParams.get('site');
   }
   
+  ionViewWillEnter(){
+
+  }
+
   goToPlace():void {
     const latitude = this.site.position.lat;
     const longitude = this.site.position.long;

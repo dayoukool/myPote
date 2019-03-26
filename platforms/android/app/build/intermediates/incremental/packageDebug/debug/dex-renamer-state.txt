@@ -1,0 +1,4 @@
+#Mon Mar 25 20:02:39 CET 2019
+base.0=D\:\\CODE\\mypote5\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
